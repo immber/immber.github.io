@@ -1,65 +1,27 @@
-[Week 1 Home](./)
+# Using Git & Git Hub for Version Control
 
-# U1.W1: Git Bloggin'
+## A quick tutorial on Git & GitHub
 
-## Learning Competencies
-- Describe version control
-- Explain how git tracks changes
-- Evaluate the benefits of using GitHub to store code
+Oct 31, 2014
 
-## Summary
+### What is Version Control, and why do you need it?
 
-Each week's curriculum includes a mandatory blogging component. In the tech community, blogging demonstrates a willingness to give back by teaching others. Blogging also requires you to practice researching and synthesizing information, both of which are vital to your growth as a developer.
+When you start developing applications the first thing you'll realize is that each application is really made up of lots and lots of different files. Each one is in some way involved in making the complete application work. Many of these files will be interconnected and "talk" to each other, thus making your program run.
 
-As you may have guessed from the [Twitter challenge](9-twitter-intro.md), being active on social media and blogging will be important to your future career prospects as well. If a hiring manager is considering two candidates for a position, both of equal in technical knowledge and skill except one candidate actively blogs and tweets, it's likely that candidate will have an advantage over the other who is not active on social media.
+Every time you want to make a change to your application, be it fix a bug, or add a new feature, or just tweak something small you'll go in and edit one or more of those files. Well how do you keep track of which files you've changed, and what changes you made in the event that one of your changes makes it so that all of the files keep playing nicely with each other? Enter Version Control.
 
-That said, no one expects your blog to be mind-blowingly good. You have only been learning this stuff for [insert # of] week(s) after all! The purpose of the blog is to show your growth and willingness to put yourself out there. When you graduate from DBC, one of the phrases you'll use to promote yourself is that you are a fast learner -- so what better way to show it than to give them a link to your blog? We recognize the difficulty of writing about technical concepts you are new to. It's hard! Practice limiting yourself to an hour to hour and a half to research and write each blog post. You don't have to be an expert!
+Version Control is basically just keeping a record of what changes you made, when you made them. How do you manage all of that? Well you could write it down somewhere or you could use a software program that's designed to keep track of every change you make automatically for you. This is what Git does.
 
-There are many other reasons we have blog assignments. One is that we simply cannot introduce you to enough important technical concepts through challenges! Trust me, the more you research and get acquainted with, the better prepared you will be. Moreover, writing for an audience (i.e. teaching") also requires you to understand the material better by cementing and identifying gaps in your knowledge. Although the blogs may seem like they are taking away time from coding, they will actually prepare you for DBC by introducing you to important concepts that will be discussed later.
+### What is Git, and why is it awesome?
 
-## Release 0: Consider
-This week you've learned a bit about the command line and gotten more familiar with Git and GitHub. Now it's your turn to write a blog to introduce these concepts to other beginners. Be sure to think about:
+Git is a software application that runs from the command prompt. Once installed you use Git to make local repositories on your system. These are like folders where you store all of those files that make up your application. Git watches those folders for you and keeps track of all the changes you make. It can also help you undo changes and revert back to a previous version of a file if you make a mistake.
 
-- What are the benefits of version control?
-- How does git help you keep track of changes?
-- Why use GitHub to store your code?
+Git is awesome, because it is really fast and easy to use. It does all the work of tracking changes for you, and you just have to let it know when you want it to take "snapshots" of the current state of your files. When you do that you make a "checkpoint" that you can come back to later if any future changes break something. Another reason Git is awesome is that it also integrates with GitHub.com.
 
-## Release 1: Prepare your blog
+### What is GitHub.com, and why should you use it?
 
-**Using ONLY your command line**
+GitHub.com is like having an online backup copy of your code that you can also share with anyone in the world. If you've "pushed" your files up form your local folders to GitHub.com you can access them from anywhere. If something happens to your computer you won't lose all those important files that make your application work.
 
-- Navigate to your [USERNAME].github.io repository
-- Make a directory called `blog`
-- In the `blog` directory, add a new file called `t1-git-blog.md`
-- Copy the markdown template from [blog-template.md](blog-template.md) (in this repository) into your `t1-git-blog.md` file.
-- Add and commit your changes with a good commit message
-- Push your changes
-- Navigate to your [USERNAME].github.io/blog/t1-git-blog.md
+GitHub.com is also a social site that allows developers from everywhere to share and distribute source code, sample files, libraries, and entire applications. You can use it to show examples of your work to a potential employer, or make an open source project available to the world. Or you can just keep private copies of your own programs for your own use.
 
-If you went through every step, you should see the blog template live on your site!
-
-
-## Release 2: Write
-
-Now, in your `t1-git-blog.md` file, write your blog post and address the main questions described above. This will be a post you share with others, so do remember to check it for clarity. You should imagine your audience is a newb (newbie) to programming. If it helps, imagine writing a post on the questions above for yourself last week.
-
-
-## Release 3: Proofread
-
-Like I said, no one expects your blog to be perfect, but since coding is a precise discipline that relies on proper syntax, it's a good idea to proof-read once.
-
-
-## Release 4: Publish
-
-Once you are satisfied with what you've written, go through the git workflow to put your blog online. It won't look pretty, since markdown files won't be rendered, but it will be readable.
-
-Next week you will make this post much prettier - but for now it's important that you get the content up there.
-
-Double check you can see your updated content on [USERNAME].github.io/blog/t1-git-blog.md.
-
-## Release 5: Promote
-
-Now that your awesome blog is done, it's time to share it with your cohort (and the world!) on twitter! Make sure to practice your awesome tweeting skills to introduce the topic.
-
-Tweet using the hashtag **#DBCgit** so everyone can find each other's links easily.
-
+Git and GitHub.com are the tools that allow developers to manage Version Control.
