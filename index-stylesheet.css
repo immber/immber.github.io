@@ -1,0 +1,133 @@
+html {
+  background-color:#393852;
+  font-family: Verdana;
+}
+
+#header {
+  border: 2px solid #C8C8FF;
+  background-color:#6968B2;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+
+}
+
+#jessie {
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+
+#summary {
+  border: 10 px solid white;
+  background-color: #C8C8FF;
+  position: absolute;
+  margin-top: -115px;
+  margin-left: 185px ;
+  padding-right: 250px;
+  color: #6968B2;
+
+}
+
+.navbar {
+  background-color: #C8C8FF;
+  color: white;
+  border: 3px solid #393852;
+  padding: 5px;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+
+}
+
+.navlink:hover {
+  color: #6968B2;
+}
+
+.social {
+  float: right;
+  position: relative;
+  bottom: 150px;
+  right: 125px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#contact {
+  float: right;
+  position: relative;
+  bottom: 100px;
+  right: 0px;
+  border: 2px solid white;
+  padding: 5px;
+
+}
+
+#contactlink {
+  color: white;
+
+}
+
+.bodylink {
+color: #393852;
+
+}
+
+.bodylink:hover {
+ color: #6968B2;
+}
+
+h3 {
+  text-align: center;
+}
+
+#blog {
+color: #6968B2;
+background-color: #C8C8FF;
+border: 2px solid #6968B2;
+width: 350px;
+height: 300px;
+margin-left: 25px;
+margin-top: 30px;
+
+
+}
+
+#projects {
+color: #6968B2;
+background-color: #C8C8FF;
+border: 2px solid #6968B2;
+width: 350px;
+height: 300px;
+margin: 0 auto;
+position: relative;
+top: -300px;
+
+}
+
+#sites {
+color: #6968B2;
+background-color: #C8C8FF;
+border: 2px solid #6968B2;
+width: 350px;
+height: 300px;
+float: right;
+position: relative;
+top: -600px;
+right: 25px;
+padding-right: 10px;
+}
+
+#abouttext {
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 25px;
+}
