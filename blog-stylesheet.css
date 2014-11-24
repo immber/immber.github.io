@@ -1,9 +1,43 @@
 #postdate {
   position: absolute;
-  right: 25px;
-  top: 10px;
+  right: 200px;
+  top: 40px;
+}
+#posttext {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+}
+
+pre {
+  background-color: lavender;
+}
+
+code {
+  background-color: lavender;
 }
 
 html {
-  font-family: Verdana;
+  font-family: sans-serif;
+  padding-top: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: whitesmoke;
+}
+
+head {
+  padding-bottom: 100px;
+}
+
+body {
+
+}
+
+h2 {
+padding-left: 20px;
+}
+
+h4 {
+
 }
