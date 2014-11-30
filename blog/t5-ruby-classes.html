@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
+    <title>Blog Post
+    </title>
+    <meta charset="UTF-8">
+    <h1> Using Classes in Ruby </h1>
+    <h4 id="postdate"> November 29, 2014 </h4>
+    <h2> What's a class, and when should you use one? </h2>
+    <h4> <a href="../index.html">Home</a> > Blog > Ruby Classes</h4>
+  </head>
+<body>
+  <div id= "posttext">
+
+    <h4> What is a class?</h4>
+
+    <p>Ruby is an object-oriented language, and everything in Ruby is an object. When we need to create a new object, we need a model to base the object on. The model that we base the object on is called a class. Every new object that gets created from a class is a new “instance” of that class. I can define a class once then create several separate new objects that are all based on the same class. </p>
+
+    <p>Well that’s fantastic, but what does it actually mean? Let’s use an example…if I had a class called Dog, I could create a bunch of dog objects in ruby. Each dog would have it’s own characteristics, like name, breed, etc. Each dog would be it’s own separate dog (think object) but all of the dogs would have some of the same things in common.  </p>
+
+    <h4> Let’s create the “Dog” class </h4>
+    <pre><code>
+      class Dog
+
+      attr_reader :name , :breed
+
+        def initialize(name, breed)
+
+        @name = name
+        @breed = breed
+
+        end
+
+        def go_for_walk
+          str = "#{@name.capitalize} would really like to go for a walk!"
+        end
+
+      end
+    </pre></code>
+
+    <h4>What can classes do?</h4>
+
+    <p>Well let’s look at the example. Each time a new dog object is created it’s going to have the following attributes: name and breed. When we create the new object we will pass in the name and breed for this particular dog. Like this: <pre> <code>my_dog = Dog.new("Seven", "Irish Wolf Hound")</code></pre> Now I can create another dog too, and then you’ll have a dog too: <pre><code> your_dog = Dog.new("Reggie", "Miniature Schnauzer")</code></pre> Here I’m using the variables <code>my_dog</code> and <code>your_dog</code> to keep track of the new objects that we created. </p>
+
+    <p>Now each dog has a <code>go_for_walk</code> method that just prints something out to the screen. I can call that method for either of my dog objects, like this:</p>
+
+    <pre><code>
+    my_dog.go_for_walk
+    your_dog.go_for_walk
+    </pre></code>
+    <p>That will print out to the screen “Seven would really like to go for a walk!" and “Reggie would really like to go for a walk!”</p>
+
+    <p>Another thing that I can do with a class is reference it’s attributes from outside of the class. This is because our Dog class uses the <code>attr_reader</code> method.  Referencing the attributes looks like this:</p>
+
+    <pre><code>
+    puts  "#{my_dog.name} is an #{my_dog.breed}!"
+    puts "#{your_dog.name} is much smaller than #{my_dog.name}"
+    </code></pre>
+
+    <p>Classes can actually do a lot more than this; this is just the beginning. They can also pass data between themselves, so that one class can look at another’s variables or attributes. They can also have “class” level methods, which act like higher level methods that work on all of the Dogs.  Finally classes can inherit methods and attributes from other classes. Imagine that Dogs was a subclass of Animals. The superclass Animals could have other methods that might apply to all kinds of animals, not just dogs. </p>
+
+    <h4>When and why should you use classes?</h4>
+
+    <p>You should use a class anytime that you need to define an object that you will create one or more instances of, and you want all of those objects to share the same characteristics. Classes help organize those object characteristics so that you can define your objects in one place, rather than have to program each instance of the object individually. Classes are a very powerful and important component to any object oriented language. </p>
+
+  </div>
+</body>
+
+</html>
