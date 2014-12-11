@@ -27,8 +27,8 @@ p {
 
 #ball_container {
   position: absolute;
-  left: 800px;
-  top:600px;
+  bottom: 0px;
+  right: 0px;
 
 }
 #yard {
@@ -36,6 +36,7 @@ p {
   width: 500px;
   margin: auto;
   border: solid black;
+  position: relative;
 
 
 }
