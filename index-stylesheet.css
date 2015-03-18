@@ -1,37 +1,39 @@
-html {
-  background-color:lavender;
+body {
+  padding-top: 70px; 
   font-family: Raleway;
+  background-image: url("imgs/20150222_125330.jpg");
+
+  /*background-size:100% auto;*/
+  background-size: cover;
+
 }
 
 #header {
-
-  background-color:#6968B2;
-  margin-top: 25px;
-  margin-left: 150px;
-  margin-right: 150px;
-  border-radius: 7px;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgba(0,0,0,0.4);
+  /*opacity: 0.6;*/
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 5px;
 
 }
+
 
 #jessie {
   margin-top: 20px;
   margin-left: 20px;
+  opacity: .8;
+  border-radius: 10px;
 
 }
 
 #summary {
-
-  position: absolute;
-  margin-top: -115px;
-  margin-left: 185px ;
-  margin-right: 300px ;
-  padding-right: 250px;
-  color: whitesmoke;
-  text-align: center;
-  font-weight: bold;
+  opacity: .8;
 }
 
-.navbar {
+/*.navbar {
   background-color: #C8C8FF;
   color: gray;
   border-radius: 7px;
@@ -147,4 +149,4 @@ border-radius: 15px;
   padding-top: 25px;
 
 
-}
+}*/
