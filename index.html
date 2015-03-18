@@ -2,81 +2,61 @@
   <head>
     <link type="text/css" rel="stylesheet" href="index-stylesheet.css"/>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/jquery-1.11.2.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <title>Jessie Rushing</title>
   </head>
-
   <body>
-      <div id="header">
-        <img id="jessie" src="http://outgrowingquickbooks.com/images/d51eee75e9f1bf4eed4f4e36b006b469.jpg" height="150px" width="125px">
-        <div id="summary">Jessie is a software developer and consultant who specializes in software that integrates with QuickBooks.
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JKR</a>
         </div>
-
-        <nav class="navbar">
-        Home |
-        <a class="navlink" href="/blog/t1-git-blog.html">Blog</a> |
-        <a class="navlink" href="/about.html">About</a> |
-        <a class="navlink" href="/#">Projects</a>
-        </nav>
-
-        <div class="social">
-          <a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a>
-          <a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a>
-          <a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a>
-          <a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a>
-        </div>
-
-        <div id="contact"> <a id="contactlink" href="mailto:jessiekrushing@hotmail.com">Contact Jessie</a>
-        </div>
-
-      </div>
-
-      <div id="container">
-      <div id="blog">
-        <h3>Technical Blog</h3>
-        <ul class="list">
-          <li><a class="bodylink" href="/blog/t1-git-blog.html">Using Git </a> </li>
-          <li><a class="bodylink" href="/blog/t2-css-design.html">CSS Positioning</a> </li>
-          <li><a class="bodylink" href="/blog/t3-arrays-hashes.html">Arrays vs. Hashes</a> </li>
-          <li><a class="bodylink" href="/blog/t4-enumerable-methods.html">Ruby Enumerable Method: Cycle</a> </li>
-          <li><a class="bodylink" href="/blog/t5-ruby-classes.html">Using Classes in Ruby</a> </li>
-          <li><a class="bodylink" href="/blog/t6-oop-concepts.html">Classes vs. Modules</a> </li>
-          <li><a class="bodylink" href="/blog/t7-JavaScript.html">Ruby Classes vs. JavaScript Constructors</a> </li>
-          <li><a class="bodylink" href="/blog/t8-tech.html">SQL Injection</a> </li>
-
-        </ul>
-        <h3>Cultural Blog</h3>
-        <ul class ="list">
-
-          <li><a class="bodylink" href="/blog/c1-chefs-kitchen.html">Happy to be at DBC </a> </li>
-          <li><a class="bodylink" href="/blog/c3-thinking-style.html">My Thinking Style</a> </li>
-          <li><a class="bodylink" href="/blog/c4-tech-issues.html">Not Enough Women in Tech</a> </li>
-          <li><a class="bodylink" href="/blog/c5-feedback.html">Feedback & Pair Programming</a></li>
-          <li><a class="bodylink" href="/blog/c6-stereotype-threat.html">Stereotype Threat</a></li>
-          <li><a class="bodylink" href="/blog/c7-values.html">Personal Values</a></li>
-          <li><a class="bodylink" href="/blog/c8-conflict.html">Dealing with Conflict</a></li>
-          <li><a class="bodylink" href="/blog/c9-questions.html">Good Questions</a></li>
-
-        </ul>
-      </div>
-
-      <div id="projects">
-        <h3>Projects</h3>
-        <ul class="list">
-          <li><a href="./projects/gps/gps1-2.html">Pair Programming</a> A guided pairing session project for DBC!</li></br>
-          <li><a href="https://floating-bastion-7741.herokuapp.com/">Upvote/Downvote Topics</a> A railsbridge tutorial just for fun!</li></br>
-          <li><a href="./projects/seven/DogToy.html">Help a puppy find his toy</a> A solo-project in javascript, html, and css, for DBC!</li></br>
-          <li><a href="./projects/git/cheat-sheet.html">Git Commands Cheat Sheet</a> A DBC pair-project.</li></br>
-
-        </ul>
-      </div>
-      <div id="sites">
-        <h3>Websites</h3>
-          <ul class="list">
-            <li><a class="bodylink" href="http://www.qbutility.com">QB Utility</a> Utility software that makes common QuickBooks tasks faster and easier</li></br>
-            <li><a class="bodylink" href="http://www.outgrowingquickbooks.com"> Outgrowing QuickBooks</a> Learn more about JR Consulting, specializing in Inventory Managment Software consulting</li>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div class="container-fluid">
+      <div class= "row">
+        <div class="col-xs-6 col-md-4">
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div id="header">
+            <img id="jessie" src="http://outgrowingquickbooks.com/images/d51eee75e9f1bf4eed4f4e36b006b469.jpg" height="150px" width="125px">
+            <div class="caption" id="summary" >
+              <h1>Jessie Rushing</h1>
+              <p>A full stack web developer with a particular knack for database design and management. She is a recent graduate of Dev Bootcamp in San Fransico. Prior to attending DBC Jessie started and built a successful software consulting and development business focused on inventory managment software that integrates with QuickBooks.</p>
+              <p><a id="contactlink" href="mailto:jessiekrushing@hotmail.com">Contact Jessie</a></p>
+            </div>
+
+          </div>
+
+          
+        <div class="col-xs-6 col-md-4">
+        </div>
+        </div>
+        <!-- </div> -->
+        <!-- div other col -->
       </div>
+    </div>
   </body>
 </html>
