@@ -1,6 +1,6 @@
 body {
   padding-top: 65px; 
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -9,7 +9,7 @@ body {
   background-size: cover;
 }
 
-#header {
+.backdrop {
   padding: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -58,6 +58,10 @@ body {
 #about {
   height: 504px;
   padding: 70px;
+}
+
+#about-text {
+  padding: 100px;
 }
 /*.navbar {
   background-color: #C8C8FF;
