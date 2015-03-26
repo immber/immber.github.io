@@ -1,11 +1,12 @@
 body {
-  padding-top: 70px; 
+  padding-top: 65px; 
   font-family: Raleway;
+
+}
+
+#first {
   background-image: url("imgs/20150222_125330.jpg");
-
-  /*background-size:100% auto;*/
   background-size: cover;
-
 }
 
 #header {
@@ -33,6 +34,31 @@ body {
   opacity: .8;
 }
 
+#blog {
+  background-color: black;
+  color: whitesmoke;
+  opacity: .9;
+  height: 504px;
+  padding: 65px;
+}
+
+#blog-list {
+  padding: 50px;
+}
+
+#projects {
+  background-image: url("imgs/20150222_124638.jpg");
+  background-size: cover;
+  /*background-color: rgba(74,115,152,1);*/
+  height: 504px;
+  padding: 65px;
+
+}
+
+#about {
+  height: 504px;
+  padding: 70px;
+}
 /*.navbar {
   background-color: #C8C8FF;
   color: gray;
