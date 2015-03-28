@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
-    <title>Blog Post
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">    <title>Blog Post
     </title>
     <meta charset="UTF-8">
     <h1> Ruby Classes vs. JavaScript Constructor </h1>
@@ -10,75 +12,78 @@
     <h2> Objects, Objects, Objects, Oh My!</h2>
     <h4> <a href="../index.html">Home</a> > Blog > Objects: Ruby vs. JavaScript</h4>
   </head>
-<body>
-  <div id= "posttext">
-
-    <p>If you happened to read my previous post on <a href="t5-ruby-classes.html"> Ruby Classes</a>, then you know that classes in Ruby are the models that we use to create new objects. Now let’s compare classes in Ruby to object constructors in JavaScript. Both Ruby and JavaScript are Object Oriented Languages, so really everything involves instantiating and manipulating objects. </p>
-
-    <h4> So that means an Object is an Object, right?</h4>
-
-    <p>Kind of... In Ruby every object is an instance of a class. In JavaScript an object is “an unordered collection of variables”. These variables are usually referred to as Properties, but they can include functions too. Fundamentally this means that in Ruby, every object that I create from a class will have the same class level and instance level variables. However, in JavaScript you can have objects that may have been initially constructed identically, but don’t necessarily contain the same variables as each other anymore. The variables in both cases can be holding on to different values, the important distinction here is that the objects in JavaScript have different variables all together. </p>
-
-    <h4> Let’s look at some examples:</h4>
-
-    <p>To create a new class in ruby, first I define its initialize method. That’s the method that gets called every time a new object is created from the class. In this case a dog object will have a name and a breed. These variables will stay with each dog object for as long as the object exists.  Each time I need a new dog, I call <code>Dog.new(“Fido”,”Irish Wolf Hound”) </code> and set the variables to the values that I want to use for this particular object.  </p>
-
-    <pre><code>
-      class Dog
-        def initialize(name, breed)
-          @name = name
-          @breed = breed
-
-          end
-        end
-    </code></pre>
-
-    <p>Now if I’m creating dog objects in JavaScript instead, first I have a couple of choices for how to build them. I can create just one dog for now and use it immediately. In this example it looks like <code>dog</code> is just a variable because it is. It’s a variable holding the dog objects’ properties. </p>
-
-    <pre><code>
-      var dog = {
-        name: "Fido",
-        breed: "Irish Wolf Hound"
-      }
-    </code></pre>
-
-    <p>That’s quick and easy, but if I want to make a whole pack of dogs, that all start out with the same variables, I can also use an object constructor function. The function (kind of like a ruby method) is what creates the new dog objects. Once defined, to create a new dog object, I have to call the function <code>var fido = new dog("Fido", "Irish Wolf Hound");</code></p>
-
-    <pre><code>
-      function dog(name, breed) {
-          this.name = name;
-          this.breed = breed;
-        }
-    </code></pre>
-
-    <p>One big difference here is that I have to assign the new object to a variable in JavaScript where as in Ruby, I can just refer to and use the object itself without wrapping it in a variable. </p>
-
-    <h4>Now Let’s Change Up The Variables</h4>
-
-    <p>Once I have created the new dog object in Ruby, it has <code> name </code> and <code>breed</code> which can be made accessible and referred to in code. Assuming I had assigned the new object to the variable <code>fido</code> for easy reference, that would look like this :</p>
-
-    <pre><code>
-      fido.breed
-      fido.name
-    </code></pre>
-
-    <p>In Ruby, at any point, I can change the values in my instance variables. So <code>fido.name = “Charlie”</code> will update the name value. The big difference is that in JavaScript, I can also add or remove variables on the object so for example:</p>
-
-    <pre><code>
-        fido.favorite_snack = "Treats";
-        fido.age = 10;
-        fido.sleepy = true;
-        delete fido.breed;
-    </code></pre>
-
-    <p>Now if I were to just look at the fido object in javascript it would look something like this: <code>{ name: 'Fido', favorite_snack: 'Treats', age: 10, sleepy: true }</code> These changes only affected the instance of dog called <code>fido</code>. If we create any new objects from our constructor they will still start out with just <code>name</code> and <code>breed</code>.</p>
-
-    <h4>Why is this a big deal?</h4>
-
-    <p>This makes manipulating properties of objects in JavaScript really easy, and flexible. Much more so than manipulating instance or class variables in Ruby. Every time I want to change my mind on what an object should track in Ruby, I have to modify the whole class, and all future objects based on that class. </p>
-
-
-  </div>
-</body>
-
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">JKR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id= "posttext">
+      <p>If you happened to read my previous post on <a href="t5-ruby-classes.html"> Ruby Classes</a>, then you know that classes in Ruby are the models that we use to create new objects. Now let’s compare classes in Ruby to object constructors in JavaScript. Both Ruby and JavaScript are Object Oriented Languages, so really everything involves instantiating and manipulating objects. </p>
+      <h4> So that means an Object is an Object, right?</h4>
+      <p>Kind of... In Ruby every object is an instance of a class. In JavaScript an object is “an unordered collection of variables”. These variables are usually referred to as Properties, but they can include functions too. Fundamentally this means that in Ruby, every object that I create from a class will have the same class level and instance level variables. However, in JavaScript you can have objects that may have been initially constructed identically, but don’t necessarily contain the same variables as each other anymore. The variables in both cases can be holding on to different values, the important distinction here is that the objects in JavaScript have different variables all together. </p>
+      <h4> Let’s look at some examples:</h4>
+      <p>To create a new class in ruby, first I define its initialize method. That’s the method that gets called every time a new object is created from the class. In this case a dog object will have a name and a breed. These variables will stay with each dog object for as long as the object exists.  Each time I need a new dog, I call <code>Dog.new(“Fido”,”Irish Wolf Hound”) </code> and set the variables to the values that I want to use for this particular object.  </p>
+      <pre><code>
+              class Dog
+                def initialize(name, breed)
+                  @name = name
+                  @breed = breed
+                  end
+                end
+      </code></pre>
+      <p>Now if I’m creating dog objects in JavaScript instead, first I have a couple of choices for how to build them. I can create just one dog for now and use it immediately. In this example it looks like <code>dog</code> is just a variable because it is. It’s a variable holding the dog objects’ properties. </p>
+      <pre><code>
+              var dog = {
+                name: "Fido",
+                breed: "Irish Wolf Hound"
+              }
+      </code></pre>
+      <p>That’s quick and easy, but if I want to make a whole pack of dogs, that all start out with the same variables, I can also use an object constructor function. The function (kind of like a ruby method) is what creates the new dog objects. Once defined, to create a new dog object, I have to call the function <code>var fido = new dog("Fido", "Irish Wolf Hound");</code></p>
+      <pre><code>
+              function dog(name, breed) {
+                  this.name = name;
+                  this.breed = breed;
+                }
+      </code></pre>
+      <p>One big difference here is that I have to assign the new object to a variable in JavaScript where as in Ruby, I can just refer to and use the object itself without wrapping it in a variable. </p>
+      <h4>Now Let’s Change Up The Variables</h4>
+      <p>Once I have created the new dog object in Ruby, it has <code> name </code> and <code>breed</code> which can be made accessible and referred to in code. Assuming I had assigned the new object to the variable <code>fido</code> for easy reference, that would look like this :</p>
+      <pre><code>
+              fido.breed
+              fido.name
+      </code></pre>
+      <p>In Ruby, at any point, I can change the values in my instance variables. So <code>fido.name = “Charlie”</code> will update the name value. The big difference is that in JavaScript, I can also add or remove variables on the object so for example:</p>
+      <pre><code>
+                fido.favorite_snack = "Treats";
+                fido.age = 10;
+                fido.sleepy = true;
+                delete fido.breed;
+      </code></pre>
+      <p>Now if I were to just look at the fido object in javascript it would look something like this: <code>{ name: 'Fido', favorite_snack: 'Treats', age: 10, sleepy: true }</code> These changes only affected the instance of dog called <code>fido</code>. If we create any new objects from our constructor they will still start out with just <code>name</code> and <code>breed</code>.</p>
+      <h4>Why is this a big deal?</h4>
+      <p>This makes manipulating properties of objects in JavaScript really easy, and flexible. Much more so than manipulating instance or class variables in Ruby. Every time I want to change my mind on what an object should track in Ruby, I have to modify the whole class, and all future objects based on that class. </p>
+    </div>
+  </body>
 </html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
-    <title>Blog Post
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">    <title>Blog Post
     </title>
     <meta charset="UTF-8">
     <h1> Ruby Enumerables- Cycle </h1>
@@ -10,58 +12,72 @@
     <h2> How to use Cycle to loop through an enumerable multiple times </h2>
     <h4> <a href="../index.html">Home</a> > Blog > Ruby Enumerables - Cycle Method</h4>
   </head>
-<body>
-  <div id= "posttext">
-  <h4>What is an "enumerable" method? </h4>
-
-  <p>Ruby uses arrays and hashes to store sets of data. When we want to step through array or hash and do something with the elements it contains, we want to use an “Enumerable” method. These methods are special in that they do something to all of the elements in the array or hash.  One of these methods is the <code>cycle</code> method.</p>
-
-  <h4> What does Cycle do? </h4>
-
-  <p>The cycle method “cycles” through the array or hash very similar to how the each method works, but with cycle you can go through the array up to an infinite number of times. Let’s see what this looks like. </br>
-  First, imagine an array that has the numbers 1 through 10:
-
-  <pre><code> array = [1,2,3,4,5,6,7,8,9,10]</code></pre>
-  <h4>Now, let’s look at how to call it: </h4>
-
-  <p>There are two ways to call cycle. If we just call cycle, and don’t tell it to “do” anything to the elements in the array, it will just return a new enumerator. This new enumerator is our current array repeated x number of times. We can pass that new enumerator into a new array. For example if I want the numbers 1 through 10, three times, I can do this:</p>
-
-  <pre><code> newarray = array.cycle(3).to_a
-  print newarray
-
-  #the result should look like this:
- [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </code></pre>
-
-  <p>The other way we can use cycle is to cycle through the array elements x number of times, and <code>do</code>something with each element.  For example, put it into a hash or perform a calculation. This way won’t return anything other than what you put in the <code>do</code>. Lets say that I want to create a new hash that contains all the numbers in my array 3 times. I’ll start by making a new hash, then I’ll call cycle on my array, like this:</p>
-  <pre><code> hash = Hash.new(0)
-  count = 0
-  array.cycle(3) {|item| hash[count +=1 ]=item}</code></pre>
-
-  <p>What is that <code> count = 0 </code> and <code> count +=1 </code> doing in there? It’s just incrementing the key for our hash as we add each array element. The <code>(3)</code> after cycle is what’s telling cycle to cycle through the array 3 times. Here's what the hash will look like:</p>
-  <pre><code>{1=>1, 2=>2, 3=>3, 4=>4, 5=>5,
-    6=>6, 7=>7, 8=>8, 9=>9, 10=>10,
-    11=>1, 12=>2, 13=>3, 14=>4, 15=>5,
-    16=>6, 17=>7, 18=>8, 19=>9, 20=>10,
-    21=>1, 22=>2, 23=>3, 24=>4, 25=>5,
-    26=>6, 27=>7, 28=>8, 29=>9, 30=>10} </code></pre>
-
-  <p>Now that’s cool, but we can also perform a calculation on each array item at the same time. Let’s modify that code just a little, like this:</p>
-  <pre><code> hash = Hash.new(0)
-  count = 0
-  array.cycle(3) {|item| hash[count +=1 ]= item * 2 }</code></pre>
-
-  <p>Now when we cycle through the array and add it to the hash we also multiply each number by 2. Each time cycle goes through the array I’m going to get [2, 4, 6, etc.]. Since cycle doesn’t actually change the values of the array as it goes, each time it loops through the array values stay the same. So this time I will get this hash: </p>
-  <pre><code>{1=>2, 2=>4, 3=>6, 4=>8, 5=>10,
-    6=>12, 7=>14, 8=>16, 9=>18, 10=>20,
-    11=>2, 12=>4, 13=>6, 14=>8, 15=>10,
-    16=>12, 17=>14, 18=>16, 19=>18, 20=>20,
-    21=>2, 22=>4, 23=>6, 24=>8, 25=>10,
-    26=>12, 27=>14, 28=>16, 29=>18, 30=>20}</code> </pre>
-
-
-  <p>Cycle is a pretty powerful method that we can use to loop through an array, just make sure that you are specifying how many times you want to loop through, or you can end up going through the array forever in an infinite loop.</p>
-  </div>
-
-</body>
-
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">JKR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id= "posttext">
+      <h4>What is an "enumerable" method? </h4>
+      <p>Ruby uses arrays and hashes to store sets of data. When we want to step through array or hash and do something with the elements it contains, we want to use an “Enumerable” method. These methods are special in that they do something to all of the elements in the array or hash.  One of these methods is the <code>cycle</code> method.</p>
+      <h4> What does Cycle do? </h4>
+      <p>The cycle method “cycles” through the array or hash very similar to how the each method works, but with cycle you can go through the array up to an infinite number of times. Let’s see what this looks like. </br>
+        First, imagine an array that has the numbers 1 through 10:
+      <pre><code> array = [1,2,3,4,5,6,7,8,9,10]</code></pre>
+      <h4>Now, let’s look at how to call it: </h4>
+      <p>There are two ways to call cycle. If we just call cycle, and don’t tell it to “do” anything to the elements in the array, it will just return a new enumerator. This new enumerator is our current array repeated x number of times. We can pass that new enumerator into a new array. For example if I want the numbers 1 through 10, three times, I can do this:</p>
+      <pre><code> newarray = array.cycle(3).to_a
+        print newarray
+        #the result should look like this:
+      [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      </code></pre>
+      <p>The other way we can use cycle is to cycle through the array elements x number of times, and <code>do</code>something with each element.  For example, put it into a hash or perform a calculation. This way won’t return anything other than what you put in the <code>do</code>. Lets say that I want to create a new hash that contains all the numbers in my array 3 times. I’ll start by making a new hash, then I’ll call cycle on my array, like this:</p>
+      <pre>
+        <code> hash = Hash.new(0)
+        count = 0
+        array.cycle(3) {|item| hash[count +=1 ]=item}</code>
+      </pre>
+      <p>What is that <code> count = 0 </code> and <code> count +=1 </code> doing in there? It’s just incrementing the key for our hash as we add each array element. The <code>(3)</code> after cycle is what’s telling cycle to cycle through the array 3 times. Here's what the hash will look like:</p>
+      <pre><code>{1=>1, 2=>2, 3=>3, 4=>4, 5=>5,
+            6=>6, 7=>7, 8=>8, 9=>9, 10=>10,
+            11=>1, 12=>2, 13=>3, 14=>4, 15=>5,
+            16=>6, 17=>7, 18=>8, 19=>9, 20=>10,
+            21=>1, 22=>2, 23=>3, 24=>4, 25=>5,
+            26=>6, 27=>7, 28=>8, 29=>9, 30=>10} </code></pre>
+      <p>Now that’s cool, but we can also perform a calculation on each array item at the same time. Let’s modify that code just a little, like this:</p>
+        <pre><code> hash = Hash.new(0)
+      count = 0
+      array.cycle(3) {|item| hash[count +=1 ]= item * 2 }</code></pre>
+      <p>Now when we cycle through the array and add it to the hash we also multiply each number by 2. Each time cycle goes through the array I’m going to get [2, 4, 6, etc.]. Since cycle doesn’t actually change the values of the array as it goes, each time it loops through the array values stay the same. So this time I will get this hash: </p>
+        <pre><code>{1=>2, 2=>4, 3=>6, 4=>8, 5=>10,
+            6=>12, 7=>14, 8=>16, 9=>18, 10=>20,
+            11=>2, 12=>4, 13=>6, 14=>8, 15=>10,
+            16=>12, 17=>14, 18=>16, 19=>18, 20=>20,
+            21=>2, 22=>4, 23=>6, 24=>8, 25=>10,
+            26=>12, 27=>14, 28=>16, 29=>18, 30=>20}</code> </pre>
+      <p>Cycle is a pretty powerful method that we can use to loop through an array, just make sure that you are specifying how many times you want to loop through, or you can end up going through the array forever in an infinite loop.</p>
+    </div>
+  </body>
 </html>

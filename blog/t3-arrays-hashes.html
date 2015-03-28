@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">    <meta charset="UTF-8">
     <title>Blog Post
     </title>
     <h1> Ruby Arrays vs. Hashes </h1>
@@ -10,81 +12,87 @@
     <h2> Understanding when to use arrays vs. hashes in Ruby </h2>
     <h4> <a href="../index.html">Home</a> > Blog > Arrays & Hashes</h4>
   </head>
-<body>
-  <div id= "posttext">
-  <h4> Let’s start with Arrays</h4>
-
-  <p>If you’re familiar with programming concepts you may already be familiar with Arrays. Arrays are pretty common. If you’re not already familiar with them, think of an array as a variable that holds multiple values instead of just one. </p>
-  <p>For example instead of creating multiple variables to hold a set of values, I can put all of those values inside of one array. </p>
-  <Pre><code>
-    variable1 = first
-    variable2 = second
-    variable3 = third
-
-    array123 = [first, second, third]
-  </code></pre>
-  <p>This way instead of having to access each variable individually, I can access the values First, Second, and Third, by just calling the array. </p>
-  <p>So how does the array keep track of how many values it’s holding and what those values are? Well every array has an index. Each value is assigned a number in that index. In the example above the value first would have an index of 0, then second would have an index of 1 and so on. Array indexes always start counting at 0 instead of 1. </p>
-
-  <h4>Let’s look at some cool things we can do with arrays in Ruby:</h4>
-
-  <pre><code>
-    array123.first                --gets the first value in the array
-    array123.last                 --gets the last value in the array
-    array123.count                --counts the number of values in the array
-    array123.find_index(“second”) --gets the index number of the value “second”
-    array123.sort                 --puts the values into alphanumeric order
-    array123.push(“fourth”)       --adds a new value of “fourth” to the end of the array
-  </code></pre>
-
-    <p>In addition to these, there are lots more methods that can be called on arrays to allow you to work with the values stored in them. You can even make an array that is made of other arrays. That’s called a multidimensional array. There are even more things you can do with those. </p>
-
-    <p>Now that we understand arrays, let’s take a look at something that is unique to Ruby…the Hash. </p>
-
-    <h4>Understanding Hashes</h4>
-
-    <p>Hashes are like arrays in that they hold multiple values, but hashes take the data or values one step further. Instead of just having an index, each value inside of a Hash also has a “key”. If you’ve every worked with databases you know that every data table should have a primary key field. A primary key is a unique identifier for the data on that row of the data table.  Let’s picture a data table that contains a list of people and their favorite book series. <p>
-
-      <table border="1" style ="width:30%" >
-        <tr>
-          <td>Jessie</td>
-          <td>Wheel of Time</td>
-        </tr>
-        <tr>
-          <td>Corey</td>
-          <td>Dune</td>
-        </tr>
-        <tr>
-          <td>Kimi</td>
-          <td>Dresden Files</td>
-        </tr>
-      </table>
-
-    <p>In this example the person’s name would be the key. One person can’t have more than one favorite book.(Of course you can in real life, just pretend with me for this example.) If we had multiple people with the same name, we’d have to add last name or something to our key to keep it unique. This is how a hash works too. It keeps the list of the values, but it relates each value to a key that can be used to reference the values. So, hashes have pairs of keys and values, instead of just having an index like an array.  When you are working with a hash you can call its value by referencing the key rather than the index number of the particular value.
-
-    <h4>Let’s see how to build a hash:</h4>
-
-<pre><code>
-    bookseries =  { “Jessie” => “Wheel of Time” , “Corey” => “Dune” , “Kimi” => “Dresden Files”}
-
-</code></pre>
-
-  <p>What is that cool little arrow that we made with the = and the >, it’s called a “hash rocket” and it’s how you associate the key with it’s value. </p>
-
-<p>Let’s see some other cool things that you can do with hashes:</p>
-
-<pre><code>
-    bookseries[“Jessie”]    --will return the value of Jessie’s favorite series “Wheel of Time”
-    bookseries.clear        --removes all the keys and values from the hash
-    bookseries[“Ken”] = “Song of Ice and Fire”    -- adds a new key and value pair for Ken’s favorite series
-    bookseries.each { |key , value| puts “#{key}’s favorite book series is #{value}” }    --this will print the “Jessie’s favorite book series is Wheel of Time” followed by “Corey’s favorite book series is Dune” and so on for each key and value in the hash
-
-</code></pre>
-
-  <h4>So why use a hash versus an array?</h4>
-
-  <p>The main reason to use a hash instead of an array is that you can call a value by it’s key instead of having to first find out the index of the value in an array. When you have a group of values, and you are going to be working with all of them so you don’t need to specifically identify each one, an array is probably fine. If you need to be able to reference specific values, and it will be easier to do that by key rather than index, then you probably want to use a hash. </p>
-</div>
-</body>
-
-</html>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">JKR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id= "posttext">
+      <h4> Let’s start with Arrays</h4>
+      <p>If you’re familiar with programming concepts you may already be familiar with Arrays. Arrays are pretty common. If you’re not already familiar with them, think of an array as a variable that holds multiple values instead of just one. </p>
+      <p>For example instead of creating multiple variables to hold a set of values, I can put all of those values inside of one array. </p>
+      <Pre><code>
+        variable1 = first
+        variable2 = second
+        variable3 = third
+        array123 = [first, second, third]
+      </code></pre>
+      <p>This way instead of having to access each variable individually, I can access the values First, Second, and Third, by just calling the array. </p>
+      <p>So how does the array keep track of how many values it’s holding and what those values are? Well every array has an index. Each value is assigned a number in that index. In the example above the value first would have an index of 0, then second would have an index of 1 and so on. Array indexes always start counting at 0 instead of 1. </p>
+      <h4>Let’s look at some cool things we can do with arrays in Ruby:</h4>
+        <pre><code>
+          array123.first                --gets the first value in the array
+          array123.last                 --gets the last value in the array
+          array123.count                --counts the number of values in the array
+          array123.find_index(“second”) --gets the index number of the value “second”
+          array123.sort                 --puts the values into alphanumeric order
+          array123.push(“fourth”)       --adds a new value of “fourth” to the end of the array
+        </code></pre>
+      <p>In addition to these, there are lots more methods that can be called on arrays to allow you to work with the values stored in them. You can even make an array that is made of other arrays. That’s called a multidimensional array. There are even more things you can do with those. </p>
+      <p>Now that we understand arrays, let’s take a look at something that is unique to Ruby…the Hash. </p>
+      <h4>Understanding Hashes</h4>
+      <p>Hashes are like arrays in that they hold multiple values, but hashes take the data or values one step further. Instead of just having an index, each value inside of a Hash also has a “key”. If you’ve every worked with databases you know that every data table should have a primary key field. A primary key is a unique identifier for the data on that row of the data table.  Let’s picture a data table that contains a list of people and their favorite book series. <p>
+        <table border="1" style ="width:30%" >
+          <tr>
+            <td>Jessie</td>
+            <td>Wheel of Time</td>
+          </tr>
+          <tr>
+            <td>Corey</td>
+            <td>Dune</td>
+          </tr>
+          <tr>
+            <td>Kimi</td>
+            <td>Dresden Files</td>
+          </tr>
+        </table>
+        <p>In this example the person’s name would be the key. One person can’t have more than one favorite book.(Of course you can in real life, just pretend with me for this example.) If we had multiple people with the same name, we’d have to add last name or something to our key to keep it unique. This is how a hash works too. It keeps the list of the values, but it relates each value to a key that can be used to reference the values. So, hashes have pairs of keys and values, instead of just having an index like an array.  When you are working with a hash you can call its value by referencing the key rather than the index number of the particular value.
+          <h4>Let’s see how to build a hash:</h4>
+          <pre><code>
+            bookseries =  { “Jessie” => “Wheel of Time” , “Corey” => “Dune” , “Kimi” => “Dresden Files”}
+          </code></pre>
+          <p>What is that cool little arrow that we made with the = and the >, it’s called a “hash rocket” and it’s how you associate the key with it’s value. </p>
+          <p>Let’s see some other cool things that you can do with hashes:</p>
+          <pre><code>
+              bookseries[“Jessie”]    --will return the value of Jessie’s favorite series “Wheel of Time”
+              bookseries.clear        --removes all the keys and values from the hash
+              bookseries[“Ken”] = “Song of Ice and Fire”    -- adds a new key and value pair for Ken’s favorite series
+              bookseries.each { |key , value| puts “#{key}’s favorite book series is #{value}” }    --this will print the “Jessie’s favorite book series is Wheel of Time” followed by “Corey’s favorite book series is Dune” and so on for each key and value in the hash
+          </code></pre>
+          <h4>So why use a hash versus an array?</h4>
+          <p>The main reason to use a hash instead of an array is that you can call a value by it’s key instead of having to first find out the index of the value in an array. When you have a group of values, and you are going to be working with all of them so you don’t need to specifically identify each one, an array is probably fine. If you need to be able to reference specific values, and it will be easier to do that by key rather than index, then you probably want to use a hash. </p>
+        </div>
+      </body>
+    </html>
