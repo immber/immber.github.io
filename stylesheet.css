@@ -1,7 +1,15 @@
+body {
+	text-align: center;
+	font-family: 'Expletus Sans', cursive;
+	background-image: url("http://image.naldzgraphics.net/2012/08/16-Yellow.jpg");
+	background-size: cover;
+}
+
 td {
 	border: 1px solid black;
 	height: 100px;
 	width: 100px;
 	text-align: center;
-	
+	font-size: 48pt;
+
 }
