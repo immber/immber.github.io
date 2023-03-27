@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link type = "css/text" rel="stylesheet" href="./cheat_sheet.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <header>
+      <h1>GIT Commands</h1>
+    </header>
+    <section class="leftPanel">
+          <div><a href="#gitInit">git init</a></div>
+          <div><a href="#gitStatus">git status</a></div>
+          <div><a href="#gitUndoChanges">git checkout -- filename</a></div>
+         <div><a href="#gitAddChanges">git add .</a></div>
+          <div><a href="#gitClearChanges">git reset HEAD filename
+or  git reset HEAD^ (all files)</a></div>
+
+         <div><a href="#gitComit">git commit -m "Added all the things"</a></div>
+         <div><a href="#git commit -m "Added all the things">git add .</a></div>
+         <div><a href="#gitCommitVerbose">git commit -v</a></div>
+         <div><a href="#gitClone">git clone &lt;URL&gt;</a></div>
+          <!-- my porton -->
+          <div><a href="#remote -v">remote -v</a></div>
+          <div><a href="#gitremoteadd">git remote add "name" <master url></a></div>
+          <div><a href="#gitpull">git pull</a></div>
+          <div><a href="#gitpush">git push origin master</a></div>
+          <div><a href="#branch">git branch branchcname</a></div>
+          <div><a href="#newbranch">git checkout branchname</a></div>
+    </section>
+    <section class="mainPanel">
+        <article>
+          <div class="commandDescription" id="gitInit"><h2>Initialize Git</h2>
+          <p>git init</p>
+        </div>
+        </article>
+        <article>
+          <div class="commandDescription" id="gitStatus"><h2>Check status</h2>
+          <p>git status</p>
+        </div>
+        </article>
+        <article>
+          <div class="commandDescription" id="gitUndoChanges"><h2>Undo Changes before commit</h2>
+          <p>git checkout -- filename</p>
+        </div>
+        </article>
+        <article>
+          <div class="commandDescription" id="gitAddChanges"><h2>Add current dir all changes/files to git</h2>
+          <p> git add .</p>
+        </div>
+        </article>
+        <article>
+          <div class="commandDescription" id="gitClearChanges"><h2>Clear the staged changes ready to commit</h2>
+          <p>  git reset HEAD filename
+or  git reset HEAD^ (all files)</p>
+        </div>
+        </article>
+        <article>
+        <div class="commandDescription" id="gitComit"><h2>Commit changes to git with message</h2>
+          <p>git commit -m "Added all the things"</p>
+        </div>
+        </article>
+        <article>
+        <div class="commandDescription" id="gitCommitVerbose"><h2>Commit changes with verbose text</h2>
+          <p>git commit -v</p>
+        </div>
+        </article>
+         <article>
+        <div class="commandDescription" id="gitClone"><h2>Forking &amp; Cloning, create local repository
+  Fork in GitHub to my user</h2>
+          <p>git clone &lt;URL&gt;</p>
+        </div>
+        </article>
+        <!-- my portion -->
+        <article>
+          <div class="commandDescription" id="remote -v"><h2> Keep updated with changes from original master</h2>
+          <p>remote -v</p>
+        </div>
+         </article>
+       <article>
+          <div class="commandDescription" id="gitremoteadd"><h2> Add remote</h2>
+          <p>git remote add "name" <master url></p>
+        </div>
+         </article>
+        <article>
+          <div class="commandDescription" id="gitpull"><h2>Pull changes down from Git</h2>
+          <p>git pull</p>
+        </div>
+         </article>
+        <article>
+          <div class="commandDescription" id="gitpush"><h2>Push changes up to GitHub</h2>
+          <p>git push remotename branch</p>
+        </div>
+         </article>
+        <article>
+          <div class="commandDescription" id="gitpullupstream"><h2>Pull changes from upstream master</h2>
+          <p>git fetch upstream master</br>
+            git merge upstream/master</p>
+        </div>
+         </article>
+        <article>
+          <div class="commandDescription" id="branch"><h2>Make a new branch</h2>
+          <p>git branch branchcname</p>
+        </div>
+        </article>
+        </article>
+        <article>
+          <div class="commandDescription" id="newbranch"><h2>Switch to new branch</h2>
+          <p>git checkout branchname</p>
+        </div>
+        </article>
+    </section>
+    <footer><span id="footer">Gary and Jessie</span></footer>
+</body>
+</html>

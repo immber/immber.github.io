@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">    <title>Blog Post
+    </title>
+    <meta charset="UTF-8">
+    <h1> Modules vs. Classes</h1>
+    <h4 id="postdate"> December 5, 2014 </h4>
+    <h2> What are modules and how do you use them? </h2>
+    <h4> <a href="../index.html">Home</a> > Blog > Modules vs. Classes</h4>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">JKR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id= "posttext">
+      <h4> Classes vs. Modules </h4>
+      <p>Ruby is what’s called an Object Oriented Language (OOL), so the first rule of Ruby is: “Everything is an object.” The second rule of Ruby is “EVERYTHING is an object”. </p>
+      <p>That means <strong>EVERYTHING</strong> including classes and modules. This part gets a little confusing so stick with me. Each object is an instance of a class. Right, got it. Now each class is in and of itself an object. For example, an array is an instance of the array class, and the array class itself is also an object.</p>
+      <h4> First let’s look at Classes </h4>
+      <p>I explained in my last <a href="t5-ruby-classes.html">post</a> that classes define the methods that objects created from the class will be able to perform.  This means that if I have a “Dog” class that defines a method <code>go_for_walk</code> when I create a new dog, <code> my_dog = Dog.new </code> I can call <code>go_for_walk</code> on the instance of the class, like this:  <code>   my_dog.go_for_walk </code></p>
+      <h4>So where do modules come in?</h4>
+      <p>A module also defines methods like a class does, but unlike a class you don’t have to create instances of modules. Think of them as just collections of methods and constants that don’t have to be instantiated to be used. When you create a class you can <code>include</code> one or more modules in that class, so that all of the objects eventually created from that class will also be able to perform the methods that are defined in the included modules. </p>
+      <h4>Great, but why would you need to do that?</h4>
+      <p>Let’s look at an example. Let’s say that I have three different classes: <code>Person, Cat, Dog</code>.  Now, I’m going to give each of these classes different methods. <code> Person</code> can <code> go_to_work</code> , and we’ll make it so that <code> Dog</code> can <code> go_for_walk</code> and finally we’ll make <code> Cat</code> have a <code>play_with_catnip </code> method. </p>
+      <p>All of these methods make sense to be defined in their respective classes, because they each only relate to their specific class. Dogs don’t like cat nip, and cats would never go to work, etc. However, there are a bunch of other activities that people, cats and dogs can all do. </p>
+      <p>Let’s say we wanted to also have methods for <code> eat</code>, <code>sleep </code>, and <code>drink_water </code>. These are things that either a dog object, person object, or cat object could do. We could individually define each one of these three methods inside each one of these classes, but that would be repetitive and really hard to change if we ever wanted to update how those methods behave down the road. This is where we’d use a module. </p>
+      <h4>Let’s build a module</h4>
+      <p>The module can contain all of the activities that will apply to every instance of our three different classes: </p>
+      <pre><code>
+            module Activities
+                def eat
+                  puts "#{self.name} is eating right now."
+                end
+                def sleep
+                  puts "#{self.name} is tired and is going to sleep."
+                end
+                def drink_water
+                  puts "#{self.name} needs a drink of water."
+                end
+              end
+      </code></pre>
+      <p>Now instead of having to define each activity a bunch of times, we can keep these methods all in one place. To add them into our classes we just need to add <code> include Activities </code>to each of our classes.  Here’s what our classes should look like:</p>
+      <pre><code>
+              class Person
+                attr_reader :name
+                include Activities
+                def initialize(name)
+                  @name = name
+                end
+                def go_to_work
+                  puts "#{@name} is going to work today."
+                end
+              end
+              class Cat
+                attr_reader :name
+                include Activities
+                def initialize(name)
+                  @name = name
+                end
+                def play_with_catnip
+                  puts "#{@name} loves playing with catnip!"
+                end
+              end
+              class Dog
+                attr_reader :name
+                include Activities
+                def initialize(name)
+                  @name = name
+                end
+                def go_for_walk
+                  puts "#{@name} is super excited to go for a walk!"
+                end
+              end
+      </code></pre>
+      <h4>Now what can we do with this?</h4>
+      <p>Well, here are some examples, first let’s create some instances of our classes:
+      <pre><code>
+                jessie = Person.new("Jessie")
+                sev = Dog.new("Seven")
+                sadee = Dog.new("Sadee")
+                trog = Cat.new("TROGDOR")
+        </code></pre>
+        Now let’s do some fun stuff. We can call the obvious methods that are apart of our classes, like this:
+        <pre><code>
+                jessie.go_to_work
+                sev.go_for_walk
+                trog.play_with_catnip
+        </code></pre>
+        But now because of the module, we can also call any of the methods from <code> Activities</code> on any of our instances of our classes.
+        <pre><code>
+                jessie.sleep
+                sev.drink_water
+                sadee.eat
+                trog.sleep
+        </code></pre></p>
+        <h4>How instances look for methods:</h4>
+        <p>So we’ve made extra methods available to our objects, how do those objects know what methods they have available? Objects look for methods first in their own class, then in any modules included in their class, then in their superclass, then in their superclass’s included modules and so on up the chain. Where a class can only inherit from one superclass, one nice thing about modules is that you can include more than one in a class. This is another reason that modules are awesome for adding additional methods to your classes. </p>
+      </div>
+    </body>
+  </html>
