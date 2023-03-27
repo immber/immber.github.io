@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../blog-stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">    <title>Blog Post
+    </title>
+    <h1> Basics of CSS Positioning </h1>
+    <h4 id="postdate">November 8, 2014</h4>
+    <h2> What are the differences between relative, absolute, and fixed positioning? </h2>
+    <h4> <a href="../index.html">Home</a> > Blog > CSS Positioning</h4>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">JKR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://linkedin.com/in/jessierushing"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/linkedinicon-e1329880359341.png"/></a></li>
+            <li><a href="http://twitter.com/immber"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/twittericon-e1329880313794.png"/></a></li>
+            <li><a href="https://github.com/immber"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="35" height="35"></a></li>
+            <li><a href="http://facebook.com/jessie.rushing.7"><img src="http://divasmobilesolutions.com/wp-content/uploads/2012/02/fbicon-e1329880206895.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id= "posttext">
+      <p>When it comes to CSS Positing understanding the different positioning types and their uses can be really aggravating. This week I spent over 2 hours messing with some Divs trying to get them all in a row. So here's an attempt to break this down for others, and for my own future reference.
+        <h4> Fixed Positioning </h4>
+        <p>
+        In my opinion Fixed Positioning is the easiest to understand so I'll start with it first. Here's an example:</p>
+        <pre><code>#myDIV {
+          position:fixed;
+          width:100px;
+          height:100px;
+          left:10px;
+          top:100px;
+        }
+        </code></pre>
+        <p>
+          So what does that do? It makes the 100x100 sized div always stay 10 px in from the left and 100 px down from the top of the BROWSER WINDOW. This means that if you resize the browser or scroll up or down the div will still sit in that exact spot. Sometimes you see this used for chat popups that stay where they are on the page as you scroll down a page.
+        </p>
+        <h4> Relative Positioning </h4>
+        <p>
+          This one is a little different, think of relative positioning as a good way to move just one element around without changing any other elements. When you use relative positioning you specify how much to move it with TOP, BOTTOM, LEFT, or RIGHT. Here's what that looks like:
+        </p>
+        <pre><code> #div-1 {
+          position:relative;
+          top:20px;
+          left:-40px;
+        }
+        </code></pre>
+        <p>
+          The amount that the element will move, in this case 20px from the top and 40px further to the left is going to be "relative" to where it would have normally been. So when you move something relatively you move it by just that much, without worrying about what the other elements are doing. Only this element will move, everything else will stay where you put it.
+        </p>
+        <h4> Absolute Positioning</h4>
+        <p>
+          This one can be more confusing because it affects the other elements on the page. Here's an example using Absolute positioning:
+        </p>
+        <pre><code>#div-2 {
+          position:absolute;
+          top:0;
+          right:0;
+        }
+        </code></pre>
+        <p>
+        When you position something absolutely, you're positioning it in that specific location. So if you use Top 0, it will be at the very top of the page. If you move something to the top of the page, it no longer takes up the space it was in, so the other elements will adjust themselves based on the new location of the element that is specified as absolute. </p>
+        <p> Hopefuly that helps clarify the Fixed, Relative and Absolute positioning!
+        </div>
+      </body>
+    </html>
