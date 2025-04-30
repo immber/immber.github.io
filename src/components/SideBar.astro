@@ -12,10 +12,14 @@ const { sideBarActiveItemID } = Astro.props;
       <a href="/">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
           <div class="w-[8.5rem]">
-            <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile.webp" alt="Profile image" />
+            <Image class="mask mask-circle" format="jpg" width={300} height={300} src="/jessie.jpg" alt="Profile image" />
           </div>
         </div>
       </a>
+      <div class="text-xl py-1">Founder & Web Developer</div>
+      <div class="text-3xl py-3 font-bold">👋 Jessie Rushing</div>
+
+
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
