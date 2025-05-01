@@ -10,69 +10,64 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
+  <div class="row pb-12 mt-5 mb-20 relative">
+    <div class="hero ">
+      <div class="hero-overlay bg-inherit object-fill rounded-[25px]">
+        <div class="text-xl py-1">Hello World! 👋🏼</div>
+      </div>
+      <img
+      src="/coastweb_logo.png"
+      class="max-w-lg rounded-[25px] shadow-2xl"
+      />
+      <div class="hero-content bg-info absolute bottom-0 shadow-xl rounded-[50px]">
+        <div class="text-5xl font-bold text-primary ">CoastWeb</div>
+        <div class="text-3xl py-3 font-bold text-neutral">because tech doesn't have to suck</div>
+      </div>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+  </div> 
+  <div class="row">
+    <div class="text-3xl w-full bg-primary font-bold rounded shadow-md p-2 mb-2">Recent projects {"</>"}</div>
+    <div> 
+      <HorizontalCard
+        title="sample-bsky-oauth-login"
+        img="/project-logos/atproto-logo.png"
+        desc="After speaking at the first ATmosphere Conference in 2025, I published a sample app to help devs implementing oAuth clients for the ATprotocol."
+        url="https://github.com/immber/sample-bsky-oauth-login"
+        badge="ATproto"
+      /> 
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="CommentsHome"
+        img="/project-logos/commentsHomeLogo.png"
+        desc="Providing secure commenting widgets with powerful AI toxicity moderation to sites of all sizes. Start engaging with your community today!"
+        url="https://commentshome.webflow.io"
+      />
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="JustPolyThings.com"
+        img="/project-logos/jpt-logo.png"
+        desc="A shopping and product review site for members of the Consensually Non Monogamous community. Having practiced solo-polyamory myself since 2014, I wanted to build a resource hub for people living a CNM/ENM lifestyle."
+        url="https://www.justpolythings.com/"
+      />
     </div>
   </div>
+  <div class="row">
+    <div class="text-3xl w-full font-bold bg-secondary rounded shadow-md p-2 mb-5 mt-10">Writing</div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    {
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/blog/" + createSlug(post.data.title, post.slug)}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    }
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
