@@ -4,48 +4,64 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
-  </div>
+<div>
+  <div class="text-3xl w-full font-bold mb-5">Publishing & Tools</div>
+</div>
+<div class="divider my-0"></div>
+<div>
+  <div class="text-2xl py-1">Digital Publishing</div>
+</div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+<HorizontalCard
+  title="JustPolyThings.com"
+  img="/project-logos/jpt-logo.png"
+  desc="A shopping and product review site for members of the Consensually Non Monogamous community. Having practiced solo-polyamory myself since 2014, I wanted to build a resource hub for people living a CNM/ENM lifestyle."
+  url="https://www.justpolythings.com/"
+  badge="Hiring"
+/>
+  
+<HorizontalCard
+  title="OutgrowingQuickBooks.com"
+  img="/project-logos/outgrowQB.png"
+  desc="Find out which accounting software is right for your SMB, with a FREE customized recommendation, or get connected to industry leading accounting software consultants to help you pick new software & implement it fast."    
+  url="https://www.outgrowingquickbooks.com/"
   />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
+<div class="divider my-0"></div>
+<div>
+  <div class="text-2xl py-1">Analog Media</div>
+</div>
 
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+<HorizontalCard
+  title="Illustrated Polyamourous Group Sex Positions, paperback book"
+  img="/project-logos/ipgsp-front.jpg"
+  desc="A gender neutral guide to group play, written and illustred by Summer Dayte. This funny adult-novelty title provides illustrated instructions for assembing orgy positions."
+  url="https://www.justpolythings.com/product/illustrated-polyamorous-group-sex-positions"
+  badge="Available Now"
+/>
+  
+<div>
+  <div class="text-3xl w-full font-bold mb-5 mt-10">Hosting & Infrastructure as a Service</div>
+</div>
+<div class="divider my-0"></div>
+
+<HorizontalCard
+  title="CommentsHome"
+  img="/project-logos/commentsHomeLogo.png"
+  desc="Providing secure commenting widgets with powerful AI toxicity moderation to sites of all sizes. Start engaging with your community today!"
+  url="https://commentshome.webflow.io"
+/>
+ 
+<div>
+  <div class="text-3xl w-full font-bold mb-5 mt-10">Open Source Contributions & Custom Dev Projects</div>
+</div>
+<div class="divider my-0"></div>
+
+<HorizontalCard
+  title="sample-bsky-oauth-login"
+  img="/project-logos/atproto-logo.png"
+  desc="After speaking at the first ATmosphere Conference in 2025, I published a sample app to help devs implementing oAuth clients for the ATprotocol."
+  url="https://github.com/immber/sample-bsky-oauth-login"
+/> 
+
 </BaseLayout>
