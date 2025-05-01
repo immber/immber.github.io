@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # build output
 dist/
 .cache
@@ -21,7 +20,6 @@ pnpm-debug.log*
 
 # Astro
 .astro/
-=======
+
 _site/*
 .jekyll-cache/*
->>>>>>> a4fa639 (adding gitignore for jekyll cache)
