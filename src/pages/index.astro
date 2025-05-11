@@ -4,6 +4,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
+//adds heroSlider component and animations from Flowbite
+import HeroSlider from "../components/HeroSlider.astro";
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
@@ -11,7 +13,7 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="row pb-12 mt-5 mb-20 relative">
-    <div class="hero inline-block grow shrink overflow-y-auto">
+    <div class="hero inline-block grow shrink overflow-y-auto flow-root">
       <div class="hero-overlay bg-inherit object-fill rounded-[25px]">
         <div class="text-xl py-1">Hello World! 👋🏼</div>
       </div>
@@ -19,10 +21,7 @@ const last_posts = posts.slice(0, 3);
       src="/coastweb_logo.png"
       class="max-w-lg rounded-[25px] shadow-2xl"
       />
-      <div class="hero-content bg-info absolute bottom-0 shadow-xl rounded-[50px] flow-root">
-        <div class="text-5xl font-bold text-primary">CoastWeb</div>
-        <div class="text-3xl py-3 font-bold text-neutral">because tech doesn't have to suck</div>
-      </div>
+      <HeroSlider/>
     </div>
   </div> 
   <div class="row">

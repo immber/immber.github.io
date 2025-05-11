@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [require("@tailwindcss/typography"),require("daisyui")],
+	plugins: [require("@tailwindcss/typography"),require("daisyui"), require("flowbite/plugin")],
 	daisyui: {
 		// themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
 		themes: [ 
