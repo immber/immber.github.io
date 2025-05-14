@@ -12,7 +12,7 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="row pb-12 mt-5 mb-20 relative">
+  <div class="row pb-12 mt-5 mb-16 relative">
     <div class="hero inline-block grow shrink overflow-y-auto flow-root">
       <div class="hero-overlay bg-inherit object-fill rounded-[25px]">
         <div class="text-xl py-1">Hello World! 👋🏼</div>
@@ -21,6 +21,9 @@ const last_posts = posts.slice(0, 3);
       src="/coastweb_logo.png"
       class="max-w-lg rounded-[25px] shadow-2xl"
       />
+      <div class="hero-content bg-info absolute left-0 shadow-xl rounded-t-[50px] rounded-br-[50px] py-8 -m-20 ml-20">
+        <div class="lg:text-5xl text-2xl font-bold text-primary">CoastWeb</div>
+      </div>
       <HeroSlider/>
     </div>
   </div> 
