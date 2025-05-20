@@ -2,7 +2,7 @@
 title: Does affiliate marketing actually work?"
 description: "An update on my experience with developing an affiliate site at JustPolyThings.com"
 pubDate: "May 20 2025"
-heroImage: "/project-logos/jpt-logo.png"
+heroImage: "/blog/jpt-logo-round-dark.png"
 tags: ["Build In Public", "Revenue Streams", "Affiliate Marketing"]
 badge: "JustPolyThings"
 ---
@@ -135,3 +135,6 @@ My plan for JPT as of today looks like:
 I might even move CMS’s. Looking at you Ghost Pro, and Outpost. However, I feel like I need to refine the new content strategy a bit more first. Big UI changes will be coming, and maybe JPT adds a new newsletter or app, but I’m NOT doing what I have been doing, anymore. 
 
 JPT exists to normalize consensual non monogamy, and promote its wonderful community of content creators. Today forward, that’s what I’m going to do.
+
+Reply with your thoughts or comments about this post on Bluesky..
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:iinae3zb33z4263joxrnza74/app.bsky.feed.post/3lpn4bwov6c2z" data-bluesky-cid="bafyreig5ayaocepzjj3ojmelnt6bjx4yljr7s3kgdke4xcbtqitdggs3bm" data-bluesky-embed-color-mode="system"><p lang="en">Sharing more in an effort to share more... today I wrote about some of the issues I&#x27;ve been dealing with since starting an affiliate marketing site 18 mos ago. coastweb.dev/blog/does-af...<br><br><a href="https://bsky.app/profile/did:plc:iinae3zb33z4263joxrnza74/post/3lpn4bwov6c2z?ref_src=embed">[image or embed]</a></p>&mdash; Jessie Rushing (<a href="https://bsky.app/profile/did:plc:iinae3zb33z4263joxrnza74?ref_src=embed">@immber.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:iinae3zb33z4263joxrnza74/post/3lpn4bwov6c2z?ref_src=embed">May 20, 2025 at 3:13 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
