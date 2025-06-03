@@ -6,6 +6,7 @@ import createSlug from "../lib/createSlug"
 
 //adds heroSlider component and animations from Flowbite
 import HeroSlider from "../components/HeroSlider.astro";
+import NewsletterForm from "@components/NewsletterForm.astro";
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
@@ -72,5 +73,10 @@ const last_posts = posts.slice(0, 3);
         </>
       ))
     }
+  </div>
+  <div class="row">
+    <div class="text-3xl w-full font-bold bg-accent rounded shadow-md p-2 mb-5 mt-10">Subscribe</div>
+    <NewsletterForm />
+    <div class="divider my-0" />
   </div>
 </BaseLayout>
