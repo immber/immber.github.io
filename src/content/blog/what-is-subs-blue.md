@@ -1,0 +1,39 @@
+---
+title: "What is subs.blue"
+description: "Subscribe to Emails from the ATmosphere"
+pubDate: "June 15 2025"
+heroImage: "/blog/subs-blue-profile.png"
+tags: ["Follow your curiosity", "ATmosphere", "Social Media"]
+badge: "ATproto"
+---
+
+You can read the [subs.blue](https://subs.blue) story on this Bluesky thread:
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m46oys2l" data-bluesky-cid="bafyreifwl5ch7ectkyomuteb6srkdpzkbixxyzt65o4c3w5qeknm5vbvk4" data-bluesky-embed-color-mode="system"><p lang="en">Here’s the subs.blue story… 
+A few weeks ago @immber.bsky.social shared some ideas about wanting to “blog about mcp, but on atproto”. This led her down a long-form-posts-on-the-atmosphere rabbit hole, and revealed how we all really want an atproto substack alternative.</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m46oys2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4m3pk2l" data-bluesky-cid="bafyreidpktvvp4tcmdapyxcysbgrrcoqckunek6lvg6hzbano3ng7domv4" data-bluesky-embed-color-mode="system"><p lang="en">She decided to focus on these key points:
+* giving atproto accounts a way to become email “subscribers” on her list.
+* ongoing consent to send email
+* a way to add email addresses to a mailing app and sync updates
+[she also wanted to try playing w/ lexicons]</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4m3pk2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4m4os2l" data-bluesky-cid="bafyreihjkowwsit46hq2wey5i5sgfdatzdxi3mqkno37f6yyb5ffienwsi" data-bluesky-embed-color-mode="system"><p lang="en">How it works
+Once logged in with oauth you can “create an integration channel” or “subscribe” to existing channels. 
+Creating a channel creates an integration to @mailerlite.bsky.social &amp; requires an API key. Only Mailerlite is available today, but more are planned! Channels are saved to your PDS.</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4m4os2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4xkvk2l" data-bluesky-cid="bafyreifwcddfmq5uknk4iy27jqp4jd3d4ep4sywrssk7sdpnuwr2kklk3e" data-bluesky-embed-color-mode="system"><p lang="en">When you create a channel, subs.blue creates a new “group” in mailerlite, and any atproto account that subscribes to your channel will have their email address added to that group. Subscriber’s emails are not saved or tracked by subs.blue. Only channel integration api keys are encrypted and retained</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4xkvk2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4xlus2l" data-bluesky-cid="bafyreih5hkyg6n3sqcnmshztlyjcedzcbuvc6kdyzqd3xkekdarvsbv5cu" data-bluesky-embed-color-mode="system"><p lang="en">When you subscribe to a channel, the email address linked to your atproto identity is added to the channel’s mailing group, and a “subs.blue.subscribe’ record is added to the subscriber’s PDS. When you unsubscribe, your email is removed (forgotten for GDPR) from the group in the mailing app.</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4xlus2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4xlut2l" data-bluesky-cid="bafyreihjyvzirnnlkslfxlmlq2plze3gzp22sxttzjjyw4twi6ko7nostm" data-bluesky-embed-color-mode="system"><p lang="en">That’s the overview.. For the atproto 🤓s, the new lexicons are blue.subs.channel and blue.subs.subscribe. This means that when viewing a PDS, you will see available channels, and what channels an account subscribes to, but that subscribers are not listed on the channel, to prevent list mining.</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4xlut2l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m4xmu32l" data-bluesky-cid="bafyreiahq4znxlkkjryimbv7vsoi2k5bmh2vfd6dxtbtvxgaflhqklpv7a" data-bluesky-embed-color-mode="system"><p lang="en">Things that still need to be added and are planned for future versions include:
+* Sync unsubscribes from a mailerlite webhook
+* Update email address changes that occur on the atprotocol identity
+* require email is verified
+Plus, integration with tools like @leaflet.pub for atproto publishing</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m4xmu32l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:tecsmsgkr2jbdoucq3jwiupy/app.bsky.feed.post/3lrm6m56lj32l" data-bluesky-cid="bafyreiddqta73yvpibcjltff7o7bklzwumaurmobflw62tj6jlxfnzyuqu" data-bluesky-embed-color-mode="system"><p lang="en">TL;DR: the version 0 idea is to be able to send emails or newsletters from whatever mailing app you are already using to a specific list of your atproto subscribers, and to make subscriptions be a thing that exist on atproto. 
+So that&#x27;s what subs.blue does as of today.</p>&mdash; Subscribe to Emails from the ATmosphere (<a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy?ref_src=embed">@subs.blue</a>) <a href="https://bsky.app/profile/did:plc:tecsmsgkr2jbdoucq3jwiupy/post/3lrm6m56lj32l?ref_src=embed">June 14, 2025 at 5:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>

@@ -31,7 +31,13 @@ const last_posts = posts.slice(0, 3);
   </div> 
   <div class="row">
     <div class="text-3xl w-full bg-neutral font-bold rounded shadow-md p-2 mb-2">Recent projects {"</>"}</div>
-    <div> 
+    <div>
+      <HorizontalCard
+        title="subs.blue"
+        img="/project-logos/subs.blue-logo.png"
+        desc="The ATmosphere's first email subscription integration tool. "
+        url="https://subs.blue"
+      /> 
       <HorizontalCard
         title="sample-bsky-oauth-login"
         img="/project-logos/atproto-logo.png"
@@ -75,8 +81,8 @@ const last_posts = posts.slice(0, 3);
     }
   </div>
   <div class="row">
-    <div class="text-3xl w-full font-bold bg-accent rounded shadow-md p-2 mb-5 mt-10">Subscribe</div>
-    <NewsletterForm />
+    <div class="text-3xl w-full font-bold bg-accent rounded shadow-md p-2 mb-5 mt-10">3 ways to Subscribe</div>
+    <NewsletterForm/>
     <div class="divider my-0" />
   </div>
 </BaseLayout>
