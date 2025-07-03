@@ -6,15 +6,7 @@ heroImage: "/blog/mcp-header-every-other-fri.png"
 tags: ["MCP Servers", "Model Context Protocol", "ATmosphere"]
 badge: "MCP"
 ---
-<script type="text/javascript">
-   document.addEventListener("DOMContentLoaded", function() {
-   const iframe = document.getElementById("leaflet-pub-3lt35tr3hv222"); 
-   var divHeight = iframe.ownerDocument.body.parentNode.scrollHeight;
-   divHeight = divHeight + 7100 ; //no idea why, just add until it works
-   iframe.height = divHeight;
-});
-
-</script>
+Before you dive in to #2 in this series, here's a link to the first post in case you missed it: [#1 What devs should know about MCP?](/blog/1-what-devs-should-know-about-mcp)
 
 <div id="iframe-wrapper">
     <iframe
@@ -22,7 +14,8 @@ badge: "MCP"
         title="MCP for Curious Devs #2"
         width="100%"
         src="https://coastweb.leaflet.pub/3lt35tr3hv222"
-        height="0"
-        scrolling="no">
+        height="8500"
+        scrolling="no"
+    >
     </iframe>
 </div>
