@@ -9,10 +9,10 @@ badge: "MCP"
 
 <div id="iframe-wrapper">
     <iframe
-        id="leaflet-pub-f3869a02-7eb2-4c00-944a-d9cba911b48c"
+        id="leaflet-pub-3lu7rbrz27s2k"
         title="MCP for Curious Devs #3"
         width="100%"
-        src="https://coastweb.leaflet.pub/f3869a02-7eb2-4c00-944a-d9cba911b48c"
+        src="https://coastweb.leaflet.pub/3lu7rbrz27s2k"
         height="8500"
         scrolling="no"
     >
