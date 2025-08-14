@@ -1,0 +1,27 @@
+---
+import { CollectionEntry, getCollection, render } from "astro:content";
+import createSlug from "../../lib/createSlug";
+
+
+export async function getStaticPaths() {
+  const postEntries = await getCollection("leaflet");
+  return postEntries.map((entry) => ({
+    params: { leaflet: entry.id,
+        slug: createSlug(entry.data.title, entry.slug) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"leaflet">;
+
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry)
+---
+
+
+<Content />
+
+
