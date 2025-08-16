@@ -19,4 +19,4 @@ Or subscribe on [Leaflet.pub](https://coastweb.leaflet.pub/) to get posts in you
 
 Starting this Friday look for the first post (in a series of yet to be determined length), 
 
-***“What devs should know about MCP?”*** 
+[***“What devs should know about MCP?”***](/leaflet/1-what-devs-should-know-about-mcp)

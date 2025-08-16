@@ -1,4 +1,6 @@
 import { z, defineCollection } from "astro:content";
+import { leafletStaticLoader } from "@nulfrost/leaflet-loader-astro";
+
 const blogSchema = z.object({
     title: z.string(),
     description: z.string(),
@@ -29,8 +31,12 @@ export type StoreSchema = z.infer<typeof storeSchema>;
 
 const blogCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
+const leafletCollection = defineCollection({
+	loader: leafletStaticLoader({ repo: "did:plc:cej6tfhazaykdc22yo3myue4" }), //@coastweb.dev
+});
 
 export const collections = {
     'blog': blogCollection,
-    'store': storeCollection
+    'store': storeCollection,
+    'leaflet': leafletCollection,
 }
