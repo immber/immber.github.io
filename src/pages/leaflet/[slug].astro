@@ -28,6 +28,7 @@ if (!post) {
 const { Content } = await render(post);
 ---
 <BaseLayout title="Leaflet" sideBarActiveItemID="leaflet">
+    <div class="text-l text-right">Published on: {new Date(entry.data.publishedAt).toDateString()}</div>
     <div class="text-3xl w-full font-bold mb-5">{entry.data.title}</div>
     <div class="divider my-0"></div>
     <div class="text-xl py-1">{entry.data.description}</div>
