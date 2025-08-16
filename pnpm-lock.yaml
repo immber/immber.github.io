@@ -18,8 +18,8 @@ dependencies:
     specifier: ^6.0.2
     version: 6.0.2(astro@5.13.0)(tailwindcss@3.3.5)
   '@nulfrost/leaflet-loader-astro':
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.1.0
+    version: 1.1.0
   astro:
     specifier: ^5.13.0
     version: 5.13.0(typescript@5.9.2)
@@ -162,6 +162,20 @@ packages:
       - supports-color
     dev: false
 
+  /@atcute/client@4.0.3:
+    resolution: {integrity: sha512-RIOZWFVLca/HiPAAUDqQPOdOreCxTbL5cb+WUf5yqQOKIu5yEAP3eksinmlLmgIrlr5qVOE7brazUUzaskFCfw==}
+    dependencies:
+      '@atcute/identity': 1.0.3
+      '@atcute/lexicons': 1.1.0
+    dev: false
+
+  /@atcute/identity@1.0.3:
+    resolution: {integrity: sha512-mNMxbKHFGys03A8JXKk0KfMBzdd0vrYMzZZWjpw1nYTs0+ea6bo5S1hwqVUZxHdo1gFHSe/t63jxQIF4yL9aKw==}
+    dependencies:
+      '@atcute/lexicons': 1.1.0
+      '@badrap/valita': 0.4.6
+    dev: false
+
   /@atcute/lexicons@1.1.0:
     resolution: {integrity: sha512-LFqwnria78xLYb62Ri/+WwQpUTgZp2DuyolNGIIOV1dpiKhFFFh//nscHMA6IExFLQRqWDs3tTjy7zv0h3sf1Q==}
     dependencies:
@@ -187,12 +201,6 @@ packages:
       graphemer: 1.4.0
       multiformats: 9.9.0
       uint8arrays: 3.0.0
-      zod: 3.25.76
-    dev: false
-
-  /@atproto/did@0.1.5:
-    resolution: {integrity: sha512-8+1D08QdGE5TF0bB0vV8HLVrVZJeLNITpRTUVEoABNMRaUS7CoYSVb0+JNQDeJIVmqMjOL8dOjvCUDkp3gEaGQ==}
-    dependencies:
       zod: 3.25.76
     dev: false
 
@@ -241,6 +249,11 @@ packages:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+    dev: false
+
+  /@badrap/valita@0.4.6:
+    resolution: {integrity: sha512-4kdqcjyxo/8RQ8ayjms47HCWZIF5981oE5nIenbfThKDxWXtEHKipAOWlflpPJzZx9y/JWYQkp18Awr7VuepFg==}
+    engines: {node: '>= 18'}
     dev: false
 
   /@capsizecss/unpack@2.4.0:
@@ -757,12 +770,13 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nulfrost/leaflet-loader-astro@1.0.0:
-    resolution: {integrity: sha512-STaKbaS1vFyN7N5Dc6UjuHVsp7p9aSROdXakO7oOkvn/inkBfvZnrm9/s94AdUclcSF8kBBLgp3ZE23B6NuiQQ==}
+  /@nulfrost/leaflet-loader-astro@1.1.0:
+    resolution: {integrity: sha512-A6ONOmds3/3pVFfa+YdpC5YMfOF1shvczAOnSWfVtUYz3bl3NRz26KieUrGW+26iVPgUtHPRLQOfygImrLrhYw==}
     dependencies:
+      '@atcute/client': 4.0.3
       '@atcute/lexicons': 1.1.0
       '@atproto/api': 0.16.2
-      '@atproto/did': 0.1.5
+      katex: 0.16.22
       sanitize-html: 2.17.0
     dev: false
 
@@ -1520,6 +1534,11 @@ packages:
   /commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
+
+  /commander@8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
 
   /common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
@@ -2407,6 +2426,13 @@ packages:
     hasBin: true
     dependencies:
       argparse: 2.0.1
+    dev: false
+
+  /katex@0.16.22:
+    resolution: {integrity: sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
     dev: false
 
   /kleur@3.0.3:

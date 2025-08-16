@@ -1,6 +1,8 @@
 ---
-import { CollectionEntry, getCollection, render } from "astro:content";
+import { CollectionEntry, getEntry, getCollection, render } from "astro:content";
 import createSlug from "../../lib/createSlug";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "@components/HorizontalCard.astro";
 
 
 export async function getStaticPaths() {
@@ -14,14 +16,23 @@ export async function getStaticPaths() {
 
 interface Props {
   entry: CollectionEntry<"leaflet">;
-
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry)
+const post = await getEntry('leaflet', entry.id);
+
+if (!post) {
+  return new Response(null, { status: 404 });
+}
+
+const { Content } = await render(post);
 ---
-
-
-<Content />
-
+<BaseLayout title="Leaflet" sideBarActiveItemID="leaflet">
+    <div class="text-3xl w-full font-bold mb-5">{entry.data.title}</div>
+    <div class="divider my-0"></div>
+    <div class="text-xl py-1">{entry.data.description}</div>
+    <div class="prose">
+        <Content />
+    </div>
+</BaseLayout>
 
